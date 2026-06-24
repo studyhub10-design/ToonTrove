@@ -6,6 +6,8 @@
     <title>Doraemon - Fun Cartoons</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dmreo4vtx/image/upload/v1782189046/favicon.png_udwwpt.jpg">
+    <link rel="stylesheet"
+href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
@@ -66,7 +68,11 @@ gtag('config', 'G-M18V61F355');
 
         <!-- Video Player -->
         <div class="video-container" id="player" style="display:none;">
-            <video id="videoPlayer" controls autoplay></video>
+            <video id="videoPlayer"
+playsinline
+controls
+autoplay>
+</video>
         </div>
     </div>
 
@@ -84,5 +90,20 @@ gtag('config', 'G-M18V61F355');
             player.scrollIntoView({ behavior: "smooth" });
         }
     </script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+<script>
+const plyrPlayer = new Plyr('#videoPlayer', {
+    controls: [
+        'play',
+        'progress',
+        'current-time',
+        'mute',
+        'volume',
+        'settings',
+        'fullscreen'
+    ]
+});
+</script>
 </body>
 </html>

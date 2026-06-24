@@ -69,7 +69,7 @@ h2 { margin: 20px 0; text-align: center; color: #333; }
 
 video {
     width: 100%;
-    max-width: 800px;
+    max-width: none;
     border-radius: 10px;
 }
 .play-btn {
@@ -86,4 +86,24 @@ video {
 
 .play-btn:hover {
     background: #e64a19;
+}
+.plyr {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.video-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+#videoPlayer {
+    width: 100%;
+    height: auto;
+}
+.plyr video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
